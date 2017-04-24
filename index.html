@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="css/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+
+  <style media="screen">
+    #openModal {
+      position: relative;
+      top: 5rem;
+      left: 50rem;
+    }
+    
+    .container {
+      padding: 5rem;
+    }
+    
+    #trash {
+      min-height: 50px;
+      background: #95a5a6;
+      color:black;
+      font-size: 2rem;
+      text-align: center;
+      padding:3rem;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="trash">
+        <p style="margin:auto !important;text-align:center">Trash</p>
+        <table class="trashTable"></table>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div id="employeeList" class="col-md-12">
+          <div class="row">
+            <div class="col-md-8">
+              <h1>Employee Details</h1>
+            </div>
+            <div class="col-md-4">
+              <button class="btn btn-primary" data-toggle="modal" data-target="#addEmployeeModal" >
+                Add Employee
+              </button>
+            </div>
+          </div>
+          
+          <table class="table" id="employeeTable">
+            <thead>
+              <th>Employee Id</th>
+              <th>Name</th>
+              <th>Department</th>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+            <h4 class="modal-title" id="myModalLabel">
+              Add Employee
+            </h4>
+          </div>
+
+          <!-- Modal Body -->
+          <div class="modal-body">
+
+            <form class="form-horizontal" role="form" id="addUserForm">
+              <div class="form-group">
+                <label class="col-sm-3 control-label" for="employeeId">Employee ID</label>
+                <div class="col-sm-9">
+                  <input type="text" name="employeeId" class="form-control" id="employeeId" placeholder="Employee ID" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label" for="name">Employee Name</label>
+                <div class="col-sm-9">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Employee Name" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label" for="department">Department</label>
+                <div class="col-sm-9">
+                  <input type="text" name="department" class="form-control" id="department" placeholder="Department" />
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Modal Footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close
+                </button>
+            <button type="button" class="btn btn-primary" id="addUser" data-dismiss="modal">
+                    Save User
+                </button>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/custom.js">
+</script>
+
+</html>
